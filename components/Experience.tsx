@@ -1,15 +1,34 @@
 import React from "react";
 
-import { workExperience } from "@/data";
+import { workExperience, companies } from "@/data";
 import { Button } from "./ui/MovingBorders";
 
 const Experience = () => {
   return (
-    <div className="py-20 w-full">
+    <div className="py-20 w-full" id="experience">
       <h1 className="heading">
-        My <span className="text-purple">work experience</span>
+        <span className="text-purple">Work Experience</span>
       </h1>
 
+      <div className="flex flex-wrap items-center justify-center gap-4 md:gap-16 max-lg:mt-10">
+        {companies.map((company) => (
+          <React.Fragment key={company.id}>
+            <div className="flex md:max-w-60 max-w-32 gap-2">
+              <img
+                src={company.img}
+                alt={company.name}
+                className="md:w-10 w-5"
+              />
+              <img
+                src={company.nameImg}
+                alt={company.name}
+                width={company.id === 4 || company.id === 5 ? 100 : 150}
+                className="md:w-24 w-20"
+              />
+            </div>
+          </React.Fragment>
+        ))}
+      </div>
       <div className="w-full mt-12 grid lg:grid-cols-4 grid-cols-1 gap-10">
         {workExperience.map((card) => (
           <Button
