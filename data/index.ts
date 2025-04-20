@@ -176,7 +176,7 @@ export const workExperience = [
   {
     id: 1,
     title: "Customer Service Supervisor",
-    desc: "Assisted in the handling of escalated customer scenarios to balance the interests of stakeholders",
+    desc: "Assisting representatives to swiftly handle customer concerns and constructively pursue continuous improvement opportunities towards achieving operational efficiency ",
     className: "md:col-span-2",
     thumbnail: "/exp2.svg",
   },
