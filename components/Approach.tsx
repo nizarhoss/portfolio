@@ -4,18 +4,23 @@ import { AnimatePresence, motion } from "framer-motion";
 import { CanvasRevealEffect } from "./ui/CanvasRevealEffect";
 
 const Approach = () => {
+  const openPDF = () => {
+    window.open("/pcr.pdf", "_blank");
+  };
+
   return (
     <section className="w-full py-20" id="PCR">
-      <h1 className="heading">
-        My PCR <span className="text-purple"> Gameplan</span>
+      <h1 className="heading" onClick={openPDF} style={{ cursor: "pointer" }}>
+        Click here for <span className="text-purple">PCR Gameplan</span>
       </h1>
+
       {/* remove bg-white dark:bg-black */}
       <div className="my-20 flex flex-col lg:flex-row items-center justify-center w-full gap-4">
         {/* add des prop */}
         <Card
-          title="Ethics and Professionalism"
-          icon={<AceternityIcon order="Category 1" />}
-          des="."
+          title="Becoming a member of WWU Clubs"
+          icon={<AceternityIcon order="Ethics and Professionalism" />}
+          des="I plan to be more engaged in clubs (Association of Supply Chain Management, Student Marketing Association) in Spring 2025"
         >
           <CanvasRevealEffect
             animationSpeed={5.1}
@@ -24,9 +29,11 @@ const Approach = () => {
           />
         </Card>
         <Card
-          title="Accessibility, Equity, Inclusion, Diversity"
-          icon={<AceternityIcon order="Category 2" />}
-          des="."
+          title="Attending EDI events"
+          icon={
+            <AceternityIcon order="Accessibility, Equity, Inclusion, Diversity" />
+          }
+          des="Biweekly participation in Western's Arab Students Association"
         >
           <CanvasRevealEffect
             animationSpeed={3}
@@ -44,9 +51,9 @@ const Approach = () => {
           {/* <div className="absolute inset-0 [mask-image:radial-gradient(400px_at_center,white,transparent)] bg-black/50 dark:bg-black/90" /> */}
         </Card>
         <Card
-          title="Professional Communication"
-          icon={<AceternityIcon order="Category 3" />}
-          des="."
+          title=""
+          icon={<AceternityIcon order="Professional Communication" />}
+          des="I competed in a case competition for operations management in Winter 2024. Our challenge was to implement circular economy principles. I liked how we were able to take the information from class and apply it to a real business challenge to solve a problem and present our proposal to stakeholders. "
         >
           <CanvasRevealEffect
             animationSpeed={3}
@@ -56,9 +63,9 @@ const Approach = () => {
         </Card>
 
         <Card
-          title="Career Preperation"
-          icon={<AceternityIcon order="Category 4" />}
-          des="."
+          title=""
+          icon={<AceternityIcon order="Career Preperation" />}
+          des="I've attended a few career fairs and networked with prospective employers. I had a chance to participate in a tour to Costco's campus and get an idea what a day in the life of working there looks like "
         >
           <CanvasRevealEffect
             animationSpeed={3}
